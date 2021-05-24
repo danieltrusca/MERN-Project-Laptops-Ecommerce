@@ -23,6 +23,10 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import CategoryCreate from "./pages/admin/category/CategoryCreate";
 import CategoryUpdate from "./pages/admin/category/UpdateCategory";
 
+// subcategory admin
+import SubCreate from "./pages/admin/sub/SubCreate";
+import SubUpdate from "./pages/admin/sub/SubUpdate";
+
 import UserRoute from "./components/routes/UserRoute";
 import AdminRoute from "./components/routes/AdminRoute";
 import { currentUser } from "./functions/auth";
@@ -76,6 +80,8 @@ const App = () => {
           path="/admin/category/:slug"
           component={CategoryUpdate}
         />
+        <AdminRoute exact path="/admin/sub" component={SubCreate} />
+        <AdminRoute exact path="/admin/sub/:slug" component={SubUpdate} />
       </Switch>
     </>
   );
