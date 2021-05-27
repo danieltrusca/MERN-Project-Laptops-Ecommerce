@@ -32,6 +32,8 @@ import ProductCreate from "./pages/admin/product/ProductCreate";
 import ProductUpdate from "./pages/admin/product/ProductUpdate";
 import AllProducts from "./pages/admin/product/AllProducts";
 
+import Product from "./pages/Product";
+
 import UserRoute from "./components/routes/UserRoute";
 import AdminRoute from "./components/routes/AdminRoute";
 import { currentUser } from "./functions/auth";
@@ -94,6 +96,8 @@ const App = () => {
           component={ProductUpdate}
         />
         <AdminRoute exact path="/admin/products" component={AllProducts} />
+
+        <Route exact path="/product/:slug" component={Product} />
       </Switch>
     </>
   );
